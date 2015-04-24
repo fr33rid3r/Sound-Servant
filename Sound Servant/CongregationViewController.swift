@@ -8,8 +8,8 @@ class CongregationViewController: UITableViewController, CongregationDetailViewC
     required init(coder aDecoder: NSCoder) {
         items = [CongregationItem]()
         super.init(coder: aDecoder)
-      println("Documents folder is \(documentsDirectory())")
-      println("Data file path is \(dataFilePath())")
+        //println("Documents folder is \(documentsDirectory())")
+        //println("Data file path is \(dataFilePath())")
         loadCongregationItems()
       
     }

@@ -53,7 +53,6 @@ class CongregationDetailViewController: UITableViewController, UITextFieldDelega
             item.bookstudy = bookstudyField.text
             item.publictalk = publictalkField.text
           
-            println("Cong: \(item.text) - Password: \(item.password)")
             delegate?.congregationDetailViewController(self, didFinishEditingItem: item)
         } else {
             let item = CongregationItem()
@@ -61,8 +60,6 @@ class CongregationDetailViewController: UITableViewController, UITextFieldDelega
             item.password = passwordField.text
             item.bookstudy = bookstudyField.text
             item.publictalk = publictalkField.text
-          
-          println("Cong: \(item.text) - Password: \(item.password)")
         
             delegate?.congregationDetailViewController(self, didFinishAddingItem: item)
         }

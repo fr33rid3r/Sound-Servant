@@ -12,13 +12,14 @@ class ConnectionViewController: UIViewController {
 
   @IBOutlet weak var reconnectButton: UIButton!
   @IBOutlet weak var disconnectButton: UIButton!
+  @IBOutlet weak var statusLabel: UILabel!
   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let connectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("myPerformeCode:"), userInfo: nil, repeats: false)
+        let connectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("connectCode:"), userInfo: nil, repeats: false)
       
-      let disconnectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: Selector("DisconnectCode:"), userInfo: nil, repeats: false)
+      let disconnectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: Selector("disconnectCode:"), userInfo: nil, repeats: false)
 
         // Do any additional setup after loading the view.
     }
@@ -28,20 +29,16 @@ class ConnectionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
   
-    func myPerformeCode(timer : NSTimer) {
+    func connectCode(timer : NSTimer) {
   
-      // here code to perform
-      println("It WORKS!!!")
-      self.title = "CONNECTED!"
+      statusLabel.text = "Connected!"
       disconnectButton.enabled = true
       reconnectButton.enabled = false
 }
 
-  func DisconnectCode(timer : NSTimer) {
-    
-    // here code to perform
+  func disconnectCode(timer : NSTimer) {
    
-    self.title = "NOT CONNECTED!"
+    statusLabel.text = "Not connected!"
     disconnectButton.enabled = false
     reconnectButton.enabled = true
   }
