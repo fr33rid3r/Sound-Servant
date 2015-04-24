@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iul-n9-gyD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iul-n9-gyD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Details-->
+        <!--Add Congregation-->
         <scene sceneID="ziu-WH-NYf">
             <objects>
                 <tableViewController id="6bI-gx-7dl" customClass="CongregationDetailViewController" customModule="Sound_Servant" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wql-SG-Dea" id="vEz-7B-fTv">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xqO-A6-tdg">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Congregation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xqO-A6-tdg">
                                                     <rect key="frame" x="14" y="7" width="484" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -58,7 +58,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OSu-8g-dfj" id="2Uv-w0-xXn">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Book Study" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CWK-6Y-muF">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tuesday 7:00pm" placeholder="Book Study" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CWK-6Y-muF">
                                                     <rect key="frame" x="14" y="7" width="550" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -74,7 +74,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DFT-bq-nNB" id="MTe-D6-9Gf">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Public Talk" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oU2-lQ-ccc">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sunday 10:00am" placeholder="Public Talk" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oU2-lQ-ccc">
                                                     <rect key="frame" x="13" y="7" width="560" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -93,7 +93,7 @@
                             <outlet property="delegate" destination="6bI-gx-7dl" id="cmz-tk-7eW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Details" id="kSJ-vm-HA3">
+                    <navigationItem key="navigationItem" title="Add Congregation" id="kSJ-vm-HA3">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="h5N-7t-8FY">
                             <connections>
                                 <action selector="cancel" destination="6bI-gx-7dl" id="bgq-fq-JaE"/>
@@ -117,7 +117,7 @@
             </objects>
             <point key="canvasLocation" x="2972" y="419"/>
         </scene>
-        <!--Congregation Logins-->
+        <!--Congregation List-->
         <scene sceneID="4yV-hP-Kyy">
             <objects>
                 <tableViewController id="T47-EW-tAF" customClass="CongregationViewController" customModule="Sound_Servant" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,7 +140,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4dR-FV-4qu">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -157,7 +157,7 @@
                             <outlet property="delegate" destination="T47-EW-tAF" id="rl4-Lf-Xib"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Congregation Logins" id="Se9-Xs-YSq">
+                    <navigationItem key="navigationItem" title="Congregation List" id="Se9-Xs-YSq">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lJd-8C-EGU">
                             <connections>
                                 <segue destination="fuv-Bl-pVP" kind="presentation" identifier="AddItem" id="1AK-qu-zBS"/>
@@ -220,7 +220,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NA-hY-gkf">
                                 <rect key="frame" x="86" y="285" width="197" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Re-connect to meeting">
+                                <state key="normal" title="Disconnect from meeting">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -233,7 +233,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoj-oL-1z6">
                                 <rect key="frame" x="82" y="350" width="204" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Disconnect from meeting">
+                                <state key="normal" title="Re-connect to meeting">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>

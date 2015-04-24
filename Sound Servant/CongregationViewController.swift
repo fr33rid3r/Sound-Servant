@@ -11,7 +11,6 @@ class CongregationViewController: UITableViewController, CongregationDetailViewC
         //println("Documents folder is \(documentsDirectory())")
         //println("Data file path is \(dataFilePath())")
         loadCongregationItems()
-      
     }
     
     
@@ -38,9 +37,11 @@ class CongregationViewController: UITableViewController, CongregationDetailViewC
     
     func configureTextForCell(cell: UITableViewCell, withCongregationItem item: CongregationItem) {
         cell.textLabel!.text = item.text
-        cell.detailTextLabel!.text = item.password
-      
+        
+        cell.detailTextLabel!.text = "\(item.bookstudy) & \(item.publictalk)"
     }
+    
+    
     
     
     func loadCongregationItems() {
@@ -62,114 +63,114 @@ class CongregationViewController: UITableViewController, CongregationDetailViewC
         archiver.finishEncoding()
         data.writeToFile(dataFilePath(), atomically: true)
     }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  // MARK: ⭐️ CongregationDetailViewController Delegate Methods ⭐️
-  func congregationDetailViewControllerDidCancel(controller: CongregationDetailViewController) {
-    dismissViewControllerAnimated(true, completion: nil)
-  }
-  
-  func congregationDetailViewController(controller: CongregationDetailViewController, didFinishAddingItem item: CongregationItem) {
-    let newRowIndex = items.count
     
-    items.append(item)
     
-    let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
-    let indexPaths = [indexPath]
-    tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
     
-    dismissViewControllerAnimated(true, completion: nil)
     
-    saveCongregationItems()
-  }
-  
-  func congregationDetailViewController(controller: CongregationDetailViewController, didFinishEditingItem item: CongregationItem) {
-    if let index = find(items, item) {
-    let indexPath = NSIndexPath(forRow: index, inSection: 0)
-    if let cell = tableView.cellForRowAtIndexPath(indexPath) {
-    configureTextForCell(cell, withCongregationItem: item)
+    
+    
+    
+    
+    
+    
+    
+    // MARK: ⭐️ CongregationDetailViewController Delegate Methods ⭐️
+    func congregationDetailViewControllerDidCancel(controller: CongregationDetailViewController) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    func congregationDetailViewController(controller: CongregationDetailViewController, didFinishAddingItem item: CongregationItem) {
+        let newRowIndex = items.count
+        
+        items.append(item)
+        
+        let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+        
+        dismissViewControllerAnimated(true, completion: nil)
+        
+        saveCongregationItems()
     }
-    dismissViewControllerAnimated(true, completion: nil)
-      
-      saveCongregationItems()
-  }
-  
-  override func tableView(tableView: UITableView,
-    commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     
-      
-      items.removeAtIndex(indexPath.row)
-      
-      let indexPaths = [indexPath]
-      tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
-      
-      saveCongregationItems()
-  }
-  
- 
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-  
-  if segue.identifier == "AddItem" {
-    
-    let navigationController = segue.destinationViewController as! UINavigationController
-    let controller = navigationController.topViewController as! CongregationDetailViewController
-    
-    controller.delegate = self
-  
-  } else if segue.identifier == "EditItem" {
-    
-    let navigationController = segue.destinationViewController as! UINavigationController
-    let controller = navigationController.topViewController as! CongregationDetailViewController
-  
-    controller.delegate = self
-    
-    if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
-    
-      controller.itemToEdit = items[indexPath.row]
+    func congregationDetailViewController(controller: CongregationDetailViewController, didFinishEditingItem item: CongregationItem) {
+        if let index = find(items, item) {
+            let indexPath = NSIndexPath(forRow: index, inSection: 0)
+            if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+                configureTextForCell(cell, withCongregationItem: item)
+            }
+        }
+        dismissViewControllerAnimated(true, completion: nil)
+        
+        saveCongregationItems()
     }
-  }
-  
-  }
-
-  
-  // MARK: ⭐️ tableView Delegate Methods ⭐️
-  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    //
-    if let cell = tableView.cellForRowAtIndexPath(indexPath) {
-      let item = items[indexPath.row]
-      }
     
-  tableView.deselectRowAtIndexPath(indexPath, animated: true)
-
-  }
-  
-  
-  // MARK: ⭐️ Data Source Methods ⭐️
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView,
+        commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+            
+            
+            items.removeAtIndex(indexPath.row)
+            
+            let indexPaths = [indexPath]
+            tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+            
+            saveCongregationItems()
+    }
     
-    return items.count
-  }
-  
-  override func tableView(tableView: UITableView,
-    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
-      let cell = tableView.dequeueReusableCellWithIdentifier("CongregationItem") as! UITableViewCell
-      let item = items[indexPath.row]
-
-    configureTextForCell(cell, withCongregationItem: item)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "AddItem" {
+            
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! CongregationDetailViewController
+            
+            controller.delegate = self
+            
+        } else if segue.identifier == "EditItem" {
+            
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! CongregationDetailViewController
+            
+            controller.delegate = self
+            
+            if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
+                
+                controller.itemToEdit = items[indexPath.row]
+            }
+        }
+        
+    }
     
-      return cell
-  }
-  
+    
+    // MARK: ⭐️ tableView Delegate Methods ⭐️
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+            let item = items[indexPath.row]
+        }
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+    }
+    
+    
+    // MARK: ⭐️ Data Source Methods ⭐️
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return items.count
+    }
+    
+    override func tableView(tableView: UITableView,
+        cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+            
+            let cell = tableView.dequeueReusableCellWithIdentifier("CongregationItem") as! UITableViewCell
+            let item = items[indexPath.row]
+            
+            configureTextForCell(cell, withCongregationItem: item)
+            
+            return cell
+    }
+    
 }
 
