@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iul-n9-gyD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iul-n9-gyD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--Details-->
+        <!--Add Congregation-->
         <scene sceneID="ziu-WH-NYf">
             <objects>
                 <tableViewController id="6bI-gx-7dl" customClass="CongregationDetailViewController" customModule="Sound_Servant" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wql-SG-Dea" id="vEz-7B-fTv">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xqO-A6-tdg">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Congregation" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xqO-A6-tdg">
                                                     <rect key="frame" x="14" y="7" width="484" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -57,7 +57,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OSu-8g-dfj" id="2Uv-w0-xXn">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Book Study" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CWK-6Y-muF">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tuesday 7:00pm" placeholder="Book Study" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CWK-6Y-muF">
                                                     <rect key="frame" x="14" y="7" width="550" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -73,7 +73,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DFT-bq-nNB" id="MTe-D6-9Gf">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Public Talk" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oU2-lQ-ccc">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sunday 10:00am" placeholder="Public Talk" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oU2-lQ-ccc">
                                                     <rect key="frame" x="13" y="7" width="560" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -92,7 +92,7 @@
                             <outlet property="delegate" destination="6bI-gx-7dl" id="cmz-tk-7eW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Details" id="kSJ-vm-HA3">
+                    <navigationItem key="navigationItem" title="Add Congregation" id="kSJ-vm-HA3">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="h5N-7t-8FY">
                             <connections>
                                 <action selector="cancel" destination="6bI-gx-7dl" id="bgq-fq-JaE"/>
@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="2972" y="419"/>
         </scene>
-        <!--Congregation Logins-->
+        <!--Congregation List-->
         <scene sceneID="4yV-hP-Kyy">
             <objects>
                 <tableViewController id="T47-EW-tAF" customClass="CongregationViewController" customModule="Sound_Servant" customModuleProvider="target" sceneMemberID="viewController">
@@ -139,7 +139,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4dR-FV-4qu">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -156,7 +156,7 @@
                             <outlet property="delegate" destination="T47-EW-tAF" id="rl4-Lf-Xib"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Congregation Logins" id="Se9-Xs-YSq">
+                    <navigationItem key="navigationItem" title="Congregation List" id="Se9-Xs-YSq">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="lJd-8C-EGU">
                             <connections>
                                 <segue destination="fuv-Bl-pVP" kind="presentation" identifier="AddItem" id="1AK-qu-zBS"/>
@@ -204,7 +204,7 @@
             </objects>
             <point key="canvasLocation" x="2220" y="419"/>
         </scene>
-        <!--Connecting...-->
+        <!--Connection Status-->
         <scene sceneID="2mO-n5-qxf">
             <objects>
                 <viewController id="kTW-Bq-A7V" customClass="ConnectionViewController" customModule="Sound_Servant" customModuleProvider="target" sceneMemberID="viewController">
@@ -216,27 +216,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NA-hY-gkf">
-                                <rect key="frame" x="46" y="463" width="197" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Re-connect to meeting">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoj-oL-1z6">
-                                <rect key="frame" x="46" y="501" width="204" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoj-oL-1z6">
+                                <rect key="frame" x="16" y="515" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Disconnect from meeting">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Trying to connect..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNn-Qh-VP5">
+                                <rect key="frame" x="16" y="159" width="568" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NA-hY-gkf">
+                                <rect key="frame" x="16" y="477" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Re-connect to meeting">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="5NA-hY-gkf" secondAttribute="centerX" id="7Hl-lr-8cx"/>
+                            <constraint firstAttribute="centerY" secondItem="dNn-Qh-VP5" secondAttribute="centerY" constant="195.5" id="FBD-ZR-Akc"/>
+                            <constraint firstAttribute="centerY" secondItem="5NA-hY-gkf" secondAttribute="centerY" constant="-36" id="RPo-pm-B1t"/>
+                            <constraint firstAttribute="centerX" secondItem="dNn-Qh-VP5" secondAttribute="centerX" constant="-8" id="SRL-mA-wdX"/>
+                            <constraint firstAttribute="centerX" secondItem="yoj-oL-1z6" secondAttribute="centerX" id="bsb-Xo-lo9"/>
+                            <constraint firstAttribute="centerY" secondItem="yoj-oL-1z6" secondAttribute="centerY" constant="-74" id="yL0-8r-EQI"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Connecting..." id="vB7-9P-iQC"/>
+                    <navigationItem key="navigationItem" title="Connection Status" id="vB7-9P-iQC"/>
                     <connections>
                         <outlet property="disconnectButton" destination="yoj-oL-1z6" id="z0H-1h-6ZS"/>
                         <outlet property="reconnectButton" destination="5NA-hY-gkf" id="sC1-Bb-dh6"/>
+                        <outlet property="statusLabel" destination="dNn-Qh-VP5" id="SYA-PL-Nxa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gyf-Zo-QG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
