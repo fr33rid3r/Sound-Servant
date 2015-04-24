@@ -31,7 +31,7 @@ class ConnectionViewController: UIViewController {
     
     func connectCode(timer : NSTimer) {
         
-        self.statusLabel.text = "CONNECTED!"
+        statusLabel.text = "CONNECTED!"
         disconnectButton.enabled = true
         reconnectButton.enabled = false
     }
@@ -40,7 +40,7 @@ class ConnectionViewController: UIViewController {
         
         // here code to perform
         
-        self.statusLabel.text = "NOT CONNECTED!"
+        statusLabel.text = "NOT CONNECTED!"
         disconnectButton.enabled = false
         reconnectButton.enabled = true
     }
