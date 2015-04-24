@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4935462E1AE998AF0082F6B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935462D1AE998AF0082F6B2 /* AppDelegate.swift */; };
-		493546301AE998AF0082F6B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935462F1AE998AF0082F6B2 /* ViewController.swift */; };
 		493546331AE998AF0082F6B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493546311AE998AF0082F6B2 /* Main.storyboard */; };
 		493546351AE998AF0082F6B2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 493546341AE998AF0082F6B2 /* Images.xcassets */; };
 		493546381AE998AF0082F6B2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 493546361AE998AF0082F6B2 /* LaunchScreen.xib */; };
 		493546441AE998AF0082F6B2 /* Sound_ServantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493546431AE998AF0082F6B2 /* Sound_ServantTests.swift */; };
+		493546501AE998CE0082F6B2 /* CongregationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935464D1AE998CE0082F6B2 /* CongregationItem.swift */; };
+		493546511AE998CE0082F6B2 /* CongregationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935464E1AE998CE0082F6B2 /* CongregationViewController.swift */; };
+		493546521AE998CE0082F6B2 /* CongregationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4935464F1AE998CE0082F6B2 /* CongregationDetailViewController.swift */; };
+		493546541AE9A6B00082F6B2 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493546531AE9A6B00082F6B2 /* ConnectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +32,16 @@
 		493546281AE998AF0082F6B2 /* Sound Servant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sound Servant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4935462C1AE998AF0082F6B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4935462D1AE998AF0082F6B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4935462F1AE998AF0082F6B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		493546321AE998AF0082F6B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		493546341AE998AF0082F6B2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		493546371AE998AF0082F6B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4935463D1AE998AF0082F6B2 /* Sound ServantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sound ServantTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		493546421AE998AF0082F6B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		493546431AE998AF0082F6B2 /* Sound_ServantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound_ServantTests.swift; sourceTree = "<group>"; };
+		4935464D1AE998CE0082F6B2 /* CongregationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongregationItem.swift; sourceTree = "<group>"; };
+		4935464E1AE998CE0082F6B2 /* CongregationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongregationViewController.swift; sourceTree = "<group>"; };
+		4935464F1AE998CE0082F6B2 /* CongregationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongregationDetailViewController.swift; sourceTree = "<group>"; };
+		493546531AE9A6B00082F6B2 /* ConnectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				4935462D1AE998AF0082F6B2 /* AppDelegate.swift */,
-				4935462F1AE998AF0082F6B2 /* ViewController.swift */,
 				493546311AE998AF0082F6B2 /* Main.storyboard */,
+				4935464D1AE998CE0082F6B2 /* CongregationItem.swift */,
+				4935464E1AE998CE0082F6B2 /* CongregationViewController.swift */,
+				4935464F1AE998CE0082F6B2 /* CongregationDetailViewController.swift */,
+				493546531AE9A6B00082F6B2 /* ConnectionViewController.swift */,
 				493546341AE998AF0082F6B2 /* Images.xcassets */,
 				493546361AE998AF0082F6B2 /* LaunchScreen.xib */,
 				4935462B1AE998AF0082F6B2 /* Supporting Files */,
@@ -212,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				493546301AE998AF0082F6B2 /* ViewController.swift in Sources */,
+				493546501AE998CE0082F6B2 /* CongregationItem.swift in Sources */,
 				4935462E1AE998AF0082F6B2 /* AppDelegate.swift in Sources */,
+				493546541AE9A6B00082F6B2 /* ConnectionViewController.swift in Sources */,
+				493546511AE998CE0082F6B2 /* CongregationViewController.swift in Sources */,
+				493546521AE998CE0082F6B2 /* CongregationDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
