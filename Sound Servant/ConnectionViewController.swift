@@ -14,12 +14,15 @@ class ConnectionViewController: UIViewController {
     @IBOutlet weak var disconnectButton: UIButton!
     
     @IBOutlet weak var statusLabel: UILabel!
+    
+    var phone:Phone = Phone()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let connectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("connectCode:"), userInfo: nil, repeats: false)
+        //let connectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("connectCode:"), userInfo: nil, repeats: false)
         
-        let disconnectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: Selector("disconnectCode:"), userInfo: nil, repeats: false)
+        //let disconnectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: Selector("disconnectCode:"), userInfo: nil, repeats: false)
         
         // Do any additional setup after loading the view.
     }
@@ -30,17 +33,17 @@ class ConnectionViewController: UIViewController {
     }
     
     func connectCode(timer : NSTimer) {
-  
-      statusLabel.text = "Connected!"
-      disconnectButton.enabled = true
-      reconnectButton.enabled = false
+  self.phone.login()
+//      statusLabel.text = "Connected!"
+//      disconnectButton.enabled = true
+//      reconnectButton.enabled = false
 }
 
   func disconnectCode(timer : NSTimer) {
    
-    statusLabel.text = "Not connected!"
-    disconnectButton.enabled = false
-    reconnectButton.enabled = true
+//    statusLabel.text = "Not connected!"
+//    disconnectButton.enabled = false
+//    reconnectButton.enabled = true
   }
 
 
