@@ -9,18 +9,18 @@
 import UIKit
 
 class ConnectionViewController: UIViewController {
-
-  @IBOutlet weak var reconnectButton: UIButton!
-  @IBOutlet weak var disconnectButton: UIButton!
-  @IBOutlet weak var statusLabel: UILabel!
-  
+    
+    @IBOutlet weak var reconnectButton: UIButton!
+    @IBOutlet weak var disconnectButton: UIButton!
+    
+    @IBOutlet weak var statusLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let connectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("connectCode:"), userInfo: nil, repeats: false)
-      
-      let disconnectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: Selector("disconnectCode:"), userInfo: nil, repeats: false)
-
+        
+        let disconnectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: Selector("disconnectCode:"), userInfo: nil, repeats: false)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -28,7 +28,7 @@ class ConnectionViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-  
+    
     func connectCode(timer : NSTimer) {
   
       statusLabel.text = "Connected!"

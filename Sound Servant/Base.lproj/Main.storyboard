@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iul-n9-gyD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Add Congregation-->
@@ -217,21 +216,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NA-hY-gkf">
-                                <rect key="frame" x="86" y="285" width="197" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoj-oL-1z6">
+                                <rect key="frame" x="16" y="515" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Disconnect from meeting">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trying to connect..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIp-04-xr0">
-                                <rect key="frame" x="16" y="98" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Trying to connect..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNn-Qh-VP5">
+                                <rect key="frame" x="16" y="159" width="568" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoj-oL-1z6">
-                                <rect key="frame" x="82" y="350" width="204" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NA-hY-gkf">
+                                <rect key="frame" x="16" y="477" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Re-connect to meeting">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -240,16 +239,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YIp-04-xr0" firstAttribute="trailing" secondItem="Hw2-VK-iai" secondAttribute="trailingMargin" id="8j7-eo-Hf9"/>
-                            <constraint firstItem="YIp-04-xr0" firstAttribute="leading" secondItem="Hw2-VK-iai" secondAttribute="leadingMargin" id="Z7B-P1-pro"/>
-                            <constraint firstItem="YIp-04-xr0" firstAttribute="top" secondItem="IkJ-Xr-s8b" secondAttribute="bottom" constant="34" id="wXV-Uk-aKK"/>
+                            <constraint firstAttribute="centerX" secondItem="5NA-hY-gkf" secondAttribute="centerX" id="7Hl-lr-8cx"/>
+                            <constraint firstAttribute="centerY" secondItem="dNn-Qh-VP5" secondAttribute="centerY" constant="195.5" id="FBD-ZR-Akc"/>
+                            <constraint firstAttribute="centerY" secondItem="5NA-hY-gkf" secondAttribute="centerY" constant="-36" id="RPo-pm-B1t"/>
+                            <constraint firstAttribute="centerX" secondItem="dNn-Qh-VP5" secondAttribute="centerX" constant="-8" id="SRL-mA-wdX"/>
+                            <constraint firstAttribute="centerX" secondItem="yoj-oL-1z6" secondAttribute="centerX" id="bsb-Xo-lo9"/>
+                            <constraint firstAttribute="centerY" secondItem="yoj-oL-1z6" secondAttribute="centerY" constant="-74" id="yL0-8r-EQI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Connection Status" id="vB7-9P-iQC"/>
                     <connections>
                         <outlet property="disconnectButton" destination="yoj-oL-1z6" id="z0H-1h-6ZS"/>
                         <outlet property="reconnectButton" destination="5NA-hY-gkf" id="sC1-Bb-dh6"/>
-                        <outlet property="statusLabel" destination="YIp-04-xr0" id="d1s-ES-zpI"/>
+                        <outlet property="statusLabel" destination="dNn-Qh-VP5" id="SYA-PL-Nxa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gyf-Zo-QG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
