@@ -20,7 +20,7 @@ class ConnectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let connectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("connectCode:"), userInfo: nil, repeats: false)
+        let connectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("connectCode:"), userInfo: nil, repeats: false)
         
         //let disconnectTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(8, target: self, selector: Selector("disconnectCode:"), userInfo: nil, repeats: false)
         

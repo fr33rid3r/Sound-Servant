@@ -97,12 +97,9 @@
 		4935461F1AE998AF0082F6B2 = {
 			isa = PBXGroup;
 			children = (
-				49A619E31AEC4E0400B35732 /* SystemConfiguration.framework */,
-				49A619E11AEC4DF300B35732 /* AudioToolbox.framework */,
-				49A619DF1AEC4DE600B35732 /* CFNetwork.framework */,
-				49A619DD1AEC4DD600B35732 /* AVFoundation.framework */,
-				49A619CB1AEC49D700B35732 /* Libraries */,
 				4935462A1AE998AF0082F6B2 /* Sound Servant */,
+				49A619E51AEC517600B35732 /* Frameworks */,
+				49A619CB1AEC49D700B35732 /* Libraries */,
 				493546401AE998AF0082F6B2 /* Sound ServantTests */,
 				493546291AE998AF0082F6B2 /* Products */,
 			);
@@ -183,6 +180,17 @@
 				49A619D81AEC4A1500B35732 /* TwilioClient.h */,
 			);
 			name = Headers;
+			sourceTree = "<group>";
+		};
+		49A619E51AEC517600B35732 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49A619E31AEC4E0400B35732 /* SystemConfiguration.framework */,
+				49A619E11AEC4DF300B35732 /* AudioToolbox.framework */,
+				49A619DF1AEC4DE600B35732 /* CFNetwork.framework */,
+				49A619DD1AEC4DD600B35732 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
